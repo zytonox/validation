@@ -1,0 +1,163 @@
+$color-primary: #1b2473;
+$color-secondary: #787878;
+$color-tertiary: #ccc;
+$color-quaternary: white;
+$color-quinary: #cb2424;
+
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  color: $color-secondary;
+
+  &::selection {
+    color: $color-quaternary;
+    background: $color-primary;
+  }
+}
+
+.page {
+  background-color: $color-primary;
+}
+
+.auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  margin: 82px auto 0;
+  border-radius: 20px;
+  background-color: $color-quaternary;
+  box-shadow: 0 0 40px 10px #00000040;
+
+  &_inactive {
+    display: none;
+  }
+
+  &__toggle {
+    align-self: flex-end;
+    height: 15px;
+    margin: 11px 5px 0 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: $color-primary;
+    border: none;
+    background: none;
+    cursor: pointer;
+    user-select: text;
+  }
+
+  &__title {
+    margin-bottom: 4px;
+    font-size: 50px;
+  }
+
+  &__form-field:nth-child(2) {
+    margin: 26px 0;
+  }
+
+  &__form-name {
+    margin: 13px 0 3px 8px;
+    font-weight: 700;
+  }
+
+  &__form-label {
+    margin-left: -10px;
+  }
+
+  &__form-label::before {
+    content: '*';
+  }
+
+  &__form-field:nth-child(-n + 2) &__form-label::before {
+    position: relative;
+    bottom: 13px;
+  }
+
+  &__form-input {
+    width: 509px;
+    padding: 5px 0 4px 15px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    border: 2px solid $color-secondary;
+    border-radius: 10px;
+    background-color: $color-quaternary;
+  }
+
+  &__form-input::placeholder {
+    color: $color-tertiary;
+  }
+
+  &__form-checkbox {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__form-checkmark {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    border: 2px solid $color-secondary;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+
+  &__form-checkmark::after {
+    position: absolute;
+    inset: 1px auto auto 7px;
+    width: 5px;
+    height: 10px;
+    transform: rotate(45deg);
+    opacity: 0;
+    border: solid $color-secondary;
+    border-width: 0 3px 3px 0;
+    content: '';
+  }
+
+  &__form-checkbox:checked + &__form-checkmark:after {
+    opacity: 1;
+  }
+
+  &__form-consent {
+    margin-left: 6px;
+    font-size: 14px;
+  }
+
+  &__form-rules {
+    text-decoration: underline;
+  }
+
+  &__form-error-color {
+    color: $color-quinary;
+  }
+
+  &__form-error-border {
+    border: 2px solid $color-quinary;
+  }
+
+  &__form-error {
+    position: absolute;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 16px;
+    color: $color-quinary;
+  }
+
+  &__form-submit {
+    display: block;
+    width: 180px;
+    height: 52px;
+    margin: 29px auto 26px;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 16px;
+    color: $color-quaternary;
+    border: none;
+    border-radius: 10px;
+    background: $color-primary none;
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0"
+      name="viewport"
+    />
+    <title>Добро пожаловать!</title>
+    <link
+      href="../favicon.ico"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <link
+      href="../styles/reset.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../styles/fonts.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../styles/style.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="page">
+    <div class="auth">
+      <button
+        class="auth__toggle"
+        onclick="localStorage.setItem('isUserLoggedIn', 'false');
+
+    location.reload();"
+      >
+        Выйти
+      </button>
+
+      <h2 class="auth__title">Добро пожаловать!</h2>
+
+      <button
+        class="auth__toggle"
+        onclick="localStorage.clear();
+
+    location.reload();"
+        style="margin-bottom: 10px; color: #cb2424"
+      >
+        Удалить аккаунт
+      </button>
+    </div>
+
+    <script>
+      const isUserLoggedIn = !!localStorage.getItem('isUserLoggedIn');
+
+      if (!isUserLoggedIn) {
+        document.location.href = './index.html';
+      }
+    </script>
+  </body>
+</html>

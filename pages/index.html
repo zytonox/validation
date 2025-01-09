@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0"
+      name="viewport"
+    />
+    <title>Вход</title>
+    <link
+      href="../favicon.ico"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <link
+      href="../styles/reset.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../styles/fonts.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../styles/style.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="page">
+    <div
+      class="auth auth_inactive"
+      id="form-sign-up"
+    >
+      <button
+        class="auth__toggle"
+        id="toggle-sign-up"
+      >
+        Авторизироваться
+      </button>
+
+      <h2 class="auth__title">Регистрация</h2>
+
+      <form class="auth__form">
+        <div class="auth__form-field">
+          <p class="auth__form-name">Email</p>
+
+          <label class="auth__form-label">
+            <input
+              autocomplete="on"
+              class="auth__form-input auth__form-info"
+              id="email-sign-up"
+              placeholder="Введите email"
+              type="email"
+            />
+          </label>
+
+          <p class="auth__form-error"></p>
+        </div>
+
+        <div class="auth__form-field">
+          <p class="auth__form-name">Пароль</p>
+
+          <label class="auth__form-label">
+            <input
+              autocomplete="on"
+              class="auth__form-input auth__form-info"
+              id="password-sign-up"
+              placeholder="Введите пароль"
+              type="password"
+          /></label>
+
+          <p class="auth__form-error"></p>
+        </div>
+
+        <div class="auth__form-field">
+          <p class="auth__form-name"></p>
+
+          <label class="auth__form-label">
+            <input
+              class="auth__form-checkbox auth__form-info"
+              id="checkbox-sign-up"
+              type="checkbox"
+            />
+
+            <div class="auth__form-checkmark"></div>
+
+            <span class="auth__form-consent">
+              Я согласен получать обновления на почту
+            </span>
+          </label>
+
+          <p class="auth__form-error"></p>
+        </div>
+
+        <input
+          class="auth__form-submit"
+          id="sign-up"
+          type="submit"
+          value="Регистрация"
+        />
+      </form>
+    </div>
+
+    <div
+      class="auth"
+      id="form-login"
+    >
+      <button
+        class="auth__toggle"
+        id="toggle-login"
+      >
+        Зарегистрироваться
+      </button>
+
+      <h2 class="auth__title">Вход</h2>
+
+      <form class="auth__form">
+        <div class="auth__form-field">
+          <p class="auth__form-name">Email</p>
+
+          <label class="auth__form-label">
+            <input
+              autocomplete="on"
+              class="auth__form-input auth__form-info"
+              id="email-login"
+              placeholder="Введите email"
+              type="email"
+            />
+          </label>
+
+          <p class="auth__form-error"></p>
+        </div>
+
+        <div class="auth__form-field">
+          <p class="auth__form-name">Пароль</p>
+
+          <label class="auth__form-label">
+            <input
+              autocomplete="on"
+              class="auth__form-input auth__form-info"
+              id="password-login"
+              placeholder="Введите пароль"
+              type="password"
+          /></label>
+
+          <p class="auth__form-error"></p>
+        </div>
+
+        <div class="auth__form-field">
+          <p class="auth__form-name"></p>
+
+          <label class="auth__form-label">
+            <input
+              class="auth__form-checkbox auth__form-info"
+              id="checkbox-login"
+              type="checkbox"
+            />
+
+            <div class="auth__form-checkmark"></div>
+
+            <span class="auth__form-consent">
+              Я согласен с
+              <a
+                class="auth__form-rules"
+                href="."
+              >
+                Правилами пользования приложением
+              </a>
+            </span>
+          </label>
+
+          <p class="auth__form-error"></p>
+        </div>
+
+        <input
+          class="auth__form-submit"
+          id="login"
+          type="submit"
+          value="Вход"
+        />
+      </form>
+    </div>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
